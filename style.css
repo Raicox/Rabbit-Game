@@ -1,0 +1,524 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.phone {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    height: 600px;
+    width: 300px;
+    background: #ccefff;
+    box-shadow: 0 19px 38px rgb(0, 0, 0,0.30), 0 15px 12px rgb(0, 0, 0,0.22);
+    counter-reset: game;
+    display: flex;
+    justify-content: center;
+}
+
+.score {
+    position: absolute;
+    top: 45px;
+    color: rgb(16, 52, 211);
+}
+
+input:checked {
+    counter-increment: game;
+}
+
+.score::after {
+    content: counter(game);
+}
+
+.layer-1 {
+    position: absolute;
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    right: 60px;
+    animation-name: layer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.layer-1 input[type=checkbox] {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
+
+.layer-2 {
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    left: 60px;
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.layer-2 input[type=checkbox] {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
+
+.layer-3 {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 220px;
+    height: 400px;
+    background: pink;
+}
+
+.layer-4 {
+    position: absolute;
+    z-index: 4;
+    height: 350px;
+    width: 80px;
+    bottom: 0;
+    left: 20px;
+    animation-name: layer;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.layer-4 input[type=checkbox] {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
+.layer-5 {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 190px;
+    height: 300px;
+    background: rgb(75, 16, 26);
+    border-radius: 10px 10px 10px 30px;
+}
+
+.layer-6 {
+    position: absolute;
+    z-index: 6;
+    height: 250px;
+    width: 80px;
+    bottom: 0;
+    right: 30px;
+    animation-name: layer;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.layer-6 input[type=checkbox] {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
+.layer-7 {
+    position: absolute;
+    z-index: 7;
+    right: 0px;
+    bottom: 0;
+    width: 150px;
+    height: 200px;
+    background: rgb(21, 9, 190);
+    border-radius: 10px 10px 30px 10px;
+}
+
+.layer-8 {
+    position: absolute;
+    z-index: 8;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 220px;
+    height: 120px;
+    background: pink;
+}
+
+.layer-9 {
+    position: absolute;
+    z-index: 9;
+    right: 0px;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    background: rgb(60, 190, 9);
+    border-radius: 10px 10px 30px 10px;
+}
+
+.layer-10 {
+    position: absolute;
+    z-index: 10;
+    left: 0px;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    background: rgb(60, 190, 9);    
+    border-radius: 10px 10px 10px 30px;
+}
+
+.left-ear--outer {
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+}
+
+.left-ear--inner {
+    background: rgb(196, 67, 168);
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 14px;
+    top: 8px;
+}
+
+.right-ear--outer {
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+
+.right-ear--inner {
+    background: rgb(196, 67, 168);
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: 14px;
+    top: 8px;
+}
+
+.head {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    top: 30px;
+}
+
+.head__eye {
+    background: rgb(0, 0, 0);
+    border-radius: 200px;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 15px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        height: 4px;
+    }
+    5% {
+        transform: translate(0px, 2px);
+        height: 1px;
+    }
+    10% {
+        transform: translate(0px, 0px);
+        height: 4px;
+    }
+}
+
+.head__eye--left {
+    left: 30px;
+}
+
+.head__eye--right {
+    right:30px;
+}
+
+.left-ear--outer-2 {
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+}
+
+.left-ear--inner-2 {
+    background: rgb(196, 67, 168);
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 14px;
+    top: 8px;
+}
+
+.right-ear--outer-2 {
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+
+.right-ear--inner-2 {
+    background: rgb(196, 67, 168);
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: 14px;
+    top: 8px;
+}
+
+.head-2 {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    top: 30px;
+}
+
+.head__eye-2 {
+    background: rgb(0, 0, 0);
+    border-radius: 200px;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 15px;
+}
+
+.head__eye--left-2 {
+    left: 30px;
+}
+
+.head__eye--right-2 {
+    right:30px;
+}
+
+.left-ear--outer-4 {
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+}
+
+.left-ear--inner-4 {
+    background: rgb(196, 67, 168);
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 14px;
+    top: 8px;
+}
+
+.right-ear--outer-4 {
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+
+.right-ear--inner-4 {
+    background: rgb(196, 67, 168);
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: 14px;
+    top: 8px;
+}
+
+.head-4 {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    top: 30px;
+}
+
+.head__eye-4 {
+    background: rgb(0, 0, 0);
+    border-radius: 200px;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 15px;
+}
+
+.head__eye--left-4 {
+    left: 30px;
+}
+
+.head__eye--right-4 {
+    right:30px;
+}
+
+.left-ear--outer-6 {
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+}
+
+.left-ear--inner-6 {
+    background: rgb(196, 67, 168);
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 14px;
+    top: 8px;
+}
+
+.right-ear--outer-6 {
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+
+.right-ear--inner-6 {
+    background: rgb(196, 67, 168);
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: 14px;
+    top: 8px;
+}
+
+.head-6 {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    top: 30px;
+}
+
+.head__eye-6 {
+    background: rgb(0, 0, 0);
+    border-radius: 200px;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 15px;
+}
+
+.head__eye--left-6 {
+    left: 30px;
+}
+
+.head__eye--right-6 {
+    right:30px;
+}
+
